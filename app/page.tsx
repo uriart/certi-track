@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { supabase } from './lib/supabase'
 import type { Partida, Extra } from './lib/types'
 
-  const IVA_RATE = 0.10
-  const DISPONIBLE_HIPOTECA = 104000
+const IVA_RATE = 0.10
+const DISPONIBLE_HIPOTECA = 67000
 
 export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
@@ -14,8 +14,8 @@ export default function DashboardPage() {
 
   const [partidas, setPartidas] = useState<Partida[]>([])
   const [extras, setExtras] = useState<Extra[]>([])
-  const [certPartidas, setCertPartidas] = useState<{partida_id: string; importe: number}[]>([])
-  const [certExtras, setCertExtras] = useState<{extra_id: string; importe: number}[]>([])
+  const [certPartidas, setCertPartidas] = useState<{ partida_id: string; importe: number }[]>([])
+  const [certExtras, setCertExtras] = useState<{ extra_id: string; importe: number }[]>([])
 
   useEffect(() => {
     if (!supabase) {
