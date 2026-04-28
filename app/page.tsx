@@ -6,7 +6,7 @@ import { supabase } from './lib/supabase'
 import type { Partida, Extra } from './lib/types'
 
 const IVA_RATE = 0.10
-const DISPONIBLE_HIPOTECA = 67000
+const DISPONIBLE_HIPOTECA = 28649.64
 
 export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
